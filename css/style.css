@@ -1,8 +1,21 @@
-/*
- * Globals
- */
+/* Imports */
 
 /* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: .05rem solid #fff;
+}
 
 
 /*
@@ -13,8 +26,54 @@ body, html {
     margin: 0;
     font: 400 15px/1.8 "Lato", sans-serif;
     color: #777;
-    background-color: #D0C9C3;
+    
 }
+
+/*
+ * Header
+ */
+header{
+    background-image: linear-gradient(to bottom, #3AAFA9 0%, #3AAFA9 50%, #2B7A78 100%);
+}
+.navbar {
+    vertical-align: middle;
+    padding: 38px 35px;
+  }
+
+
+.navbar-brand {
+  margin-bottom: 0;
+}
+
+.navbar-collapse .nav-link {
+  padding: .25rem 0;
+  font: bold 20px;
+  color: rgba(255,255,255,.5);
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
+} 
+/* ... Overriding the bootstrap container-fluid and bg-dark classes */
+
+.container-fluid{
+    padding: 15px;
+}
+.bg-dark {
+    background-color: #2B7A78!important;
+}
+.navbar-collapse .nav-link:hover,
+.navbar-collapse .nav-link:focus {
+  border-bottom-color: rgba(255,255,255,.25);
+}
+
+.navbar-collapse .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.navbar-collapse .active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
 
 .bgimg-1, .bgimg-2, .bgimg-3 {
   position: relative;
@@ -26,7 +85,7 @@ body, html {
 
 }
 .bgimg-1 {
-  background-image: url("../images/programming.jpg");
+  background-image: url("../images/programming.png");
   min-height: 100%;
 }
 
@@ -41,12 +100,13 @@ body, html {
 }
 
 .caption {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 100%;
-  text-align: center;
-  color: #000;
+    font-family: 'Codystar', cursive;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
 }
 
 .caption span.border {
@@ -74,10 +134,19 @@ h3 {
 /* page */
 
 .page{
-    min-height: calc(100vh - 3.5rem);
+    min-height: calc(100vh - 7.5rem);
     margin: 0;
 }
 
 /*
  * Footer
  */
+
+
+/*
+ * Media queries
+ */
+@media (min-width: 48em)
+    .navbar {
+        float: none;
+}
