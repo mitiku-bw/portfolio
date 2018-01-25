@@ -90,7 +90,7 @@ header{
 }
 
 .bgimg-2 {
-  background-image: url("img_parallax2.jpg");
+  background-image: url("../images/christian-typing.JPG");
   min-height: 400px;
 }
 
@@ -98,7 +98,9 @@ header{
   background-image: url("img_parallax3.jpg");
   min-height: 400px;
 }
-
+.section-text{
+    color: #f5f6f7;
+}
 .caption {
     font-family: 'Codystar', cursive;
     position: absolute;
@@ -137,6 +139,7 @@ h3 {
     min-height: calc(100vh - 7.5rem);
     margin: 0;
 }
+
 
 /*
  * Footer
