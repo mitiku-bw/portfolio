@@ -108,7 +108,6 @@ header.row{
     top:0;
     left:0;
     width:100vw;
-    z-index:1;
     background:#4fb3a0;
     /*background:#225470;*/
     opacity:0.25;
@@ -116,7 +115,6 @@ header.row{
 
 .header-content{
     z-index:1;
-    text-align: center;
     /*
     background-color: rgba(244,244,244,0.5);
     */
@@ -168,6 +166,7 @@ header.row{
 /*
  * Social media icons
  */
+
 .social-media{
     border-radius: 20px;
     border-right: 1px outset #ffc107;
@@ -254,6 +253,9 @@ header.row{
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
+      .header-content{
+          text-align: center;
+      }
       .social-media{
           border: none;
           text-align: center;
