@@ -9,6 +9,7 @@
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    
     <title>Mitiku Wubetie | Portfolio</title>
 </head>
 <body data-spy="scroll" data-target="#navigationbar" data-offset="50">
@@ -18,7 +19,7 @@
             <video id="video-background" src="images/Writing-Working/Writing-Working.mp4" autoplay="" loop=""></video>
         </div>
         <div class="header-overlay"></div>
-        <div class="social-media col-md-4">
+        <div id="social-icons" class="social-media col-md-4">
             <!-- Add font awesome icons -->
             <ul>
                 <li><a href="#" class="fa fa-linkedin"></a></li>
@@ -69,22 +70,43 @@
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, impedit amet minima iste autem cumque et maiores blanditiis doloribus aut dolorum quaerat non est voluptatum, tempore ut dolorem voluptas quod quae accusantium, ex inventore ducimus. Beatae mollitia exercitationem, quam similique, consectetur ratione reprehenderit delectus neque eligendi facere soluta dolor ducimus!</p>
         </div>
     </section>
-    <section id="contact" class="section section-b">
-        <div class="container">
-            <h2>Section B</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, impedit amet minima iste autem cumque et maiores blanditiis doloribus aut dolorum quaerat non est voluptatum, tempore ut dolorem voluptas quod quae accusantium, ex inventore ducimus. Beatae mollitia exercitationem, quam similique, consectetur ratione reprehenderit delectus neque eligendi facere soluta dolor ducimus!</p>
+    <section id="contact" class="section contact-me">
+        <div class="text-center">
+            <h2>Contact me</h2>
+            <p>Send me an email:</p>
         </div>
-    </section>
-    <section class="section section-b">
-        <div class="container">
-            <h2>Section B</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, impedit amet minima iste autem cumque et maiores blanditiis doloribus aut dolorum quaerat non est voluptatum, tempore ut dolorem voluptas quod quae accusantium, ex inventore ducimus. Beatae mollitia exercitationem, quam similique, consectetur ratione reprehenderit delectus neque eligendi facere soluta dolor ducimus!</p>
-        </div>
-    </section>
-    <section class="section contact-me">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, impedit amet minima iste autem cumque et maiores blanditiis doloribus aut dolorum quaerat non est voluptatum, tempore ut dolorem voluptas quod quae accusantium, ex inventore ducimus. Beatae mollitia exercitationem, quam similique, consectetur ratione reprehenderit delectus neque eligendi facere soluta dolor ducimus!</p>
+        <div class="row">
+            <div class="col-md-6">
+                <div id="map"></div>
+            </div>
+            <div class="col-md-6">
+                <form action="/action_page.php">
+                    <div class="form-group row">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">I'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group row">
+                        <label for="name">Name</label>
+                        <input type="name" class="form-control" id="name" aria-describedby="name" placeholder="Name">
+                    </div>
+                    <div class="form-group row">
+                        <label for="country">Country</label>
+                        <select class="form-control" id="country">
+                            <option>Ethiopia</option>
+                            <option>Finland</option>
+                            <option>Germany</option>
+                            <option>Russia</option>
+                            <option>Sweden</option>
+                        </select>
+                    </div>
+                    <div class="form-group row">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </form>
+            </div>
         </div>
     </section>
     
@@ -93,5 +115,49 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+        // Initialize google maps
+        function myMap() {
+          var myCenter = new google.maps.LatLng(51.508742,-0.120850);
+          var mapCanvas = document.getElementById("map");
+          var mapOptions = {center: myCenter, zoom: 12};
+          var map = new google.maps.Map(mapCanvas, mapOptions);
+          var marker = new google.maps.Marker({position:myCenter});
+          marker.setMap(map);
+            var map;
+var brooklyn = new google.maps.LatLng(40.6743890, -73.9455);
+
+var stylez = [
+    {
+      featureType: "all",
+      elementType: "all",
+      stylers: [
+        { saturation: -100 } // <-- THIS
+      ]
+    }
+];
+
+var mapOptions = {
+    zoom: 11,
+    center: brooklyn,
+    mapTypeControlOptions: {
+         mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'tehgrayz']
+    }
+};
+
+map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+
+var mapType = new google.maps.StyledMapType(stylez, { name:"Grayscale" });    
+map.mapTypes.set('tehgrayz', mapType);
+map.setMapTypeId('tehgrayz');
+        }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+    <!--
+    To use this code on your website, get a free API key from Google.
+    Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+    -->
+
 </body>
 </html>
