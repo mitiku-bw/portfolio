@@ -27,7 +27,7 @@
                 <li><a href="#" class="fa fa-google"></a></li>
             </ul>
         </div>
-        <div class="header-content col-md-8">
+        <div class="header-content typewriter col-md-8">
             <h1>Hello, I'm Mitiku.</h1>
             <p>I'm a software developer!</p>
             <button class="scroll-down"><i class="fa fa-angle-down text-yellow"></i></button>
@@ -60,15 +60,56 @@
     
     <section id="about" class="section section-a">
         <div class="container">
-            <h2>Section A</h2>
+            <h2 class="page-title">About</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, impedit amet minima iste autem cumque et maiores blanditiis doloribus aut dolorum quaerat non est voluptatum, tempore ut dolorem voluptas quod quae accusantium, ex inventore ducimus. Beatae mollitia exercitationem, quam similique, consectetur ratione reprehenderit delectus neque eligendi facere soluta dolor ducimus!</p>
         </div>
     </section>
     <section id="portfolio" class="section section-b">
         <div class="container">
-            <h2>Section B</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, impedit amet minima iste autem cumque et maiores blanditiis doloribus aut dolorum quaerat non est voluptatum, tempore ut dolorem voluptas quod quae accusantium, ex inventore ducimus. Beatae mollitia exercitationem, quam similique, consectetur ratione reprehenderit delectus neque eligendi facere soluta dolor ducimus!</p>
-        </div>
+            <h2 class="title">Portfolio</h2>
+            <div id="tabContainer">
+                <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+                <button class="btn" onclick="filterSelection('angular')"> Angular</button>
+                <button class="btn" onclick="filterSelection('react')"> React</button>
+                <button class="btn" onclick="filterSelection('node')"> Node.js</button>
+                <button class="btn" onclick="filterSelection('others')"> Others</button>
+            </div>
+            <!-- Portfolio Gallery Grid -->
+            <div class="row">
+              <div class="column angular">
+                <div class="content">
+                  <img src="/images/angular.png" alt="angular" style="width:100%">
+                  <h4>Angular projects</h4>
+                  <p>Lorem ipsum dolor..</p>
+                </div>
+              </div>
+              <div class="column react">
+                <div class="content">
+                  <img src="/images/react.png" alt="react" style="width:100%">
+                  <h4>React Projects</h4>
+                  <p>Lorem ipsum dolor..</p>
+                </div>
+              </div>
+              <div class="column node">
+                <div class="content">
+                  <img src="/images/node.png" alt="node" style="width:100%">
+                  <h4>Node.js Projects</h4>
+                  <p>Lorem ipsum dolor..</p>
+                </div>
+              </div>
+              <div class="column others">
+                <div class="content">
+                  <img src="/images/web-dev.png" alt="other" style="width:100%">
+                  <h4>Other Projects</h4>
+                  <p>Lorem ipsum dolor..</p>
+                </div>
+              </div>
+
+            <!-- END GRID -->
+            </div>
+
+            <!-- END MAIN -->
+            </div>
     </section>
     <section id="contact" class="section contact-me">
         <div class="text-center">
@@ -104,7 +145,10 @@
                         <label for="message">Message</label>
                         <textarea class="form-control" id="message" rows="3"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send</button>
+                    <div class="form-group row">
+                        <button type="submit" class="btn btn-primary btn-block">Send</button>
+                    </div>
+                    
                 </form>
             </div>
         </div>
@@ -115,6 +159,52 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("tabContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
     <script>
         function initMap() {
         // Styles a map in night mode.

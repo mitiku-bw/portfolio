@@ -28,6 +28,11 @@ h1, h2, h3, h4, h5, h6{
     color: #ffc107;
 }
 
+.page-title{
+    border-bottom: .25rem solid white;
+    width: 4em;
+}
+
 /* Overriding bootstrap classes */
 .navbar-light{
     color: white;
@@ -121,6 +126,7 @@ header.row{
     */
 }
 
+
 .header-content h1{
     font-size:50px;
     margin-bottom:0;
@@ -132,7 +138,7 @@ header.row{
     padding-bottom:2rem;
 }
 
-.btn{
+.form-group .btn{
     background: #34b3a0;
     color:#fff;
     font-size:1.2rem;
@@ -236,6 +242,42 @@ header.row{
 }
 
 /* Style inputs */
+.form-control{
+    background-color: transparent;
+    color: white;
+}
+
+/******** PORTFOLIO *********/
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    display: none; /* Hide all elements by default */
+}
+
+
+/* The "show" class is added to the filtered elements */
+#portfolio .show {
+  display: block;
+}
+
+/* Style the buttons */
+#portfolio .btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+#portfolio .btn:hover {
+  background-color: #ddd;
+}
+
+#portfolio .btn.active {
+  background-color: #666;
+  color: white;
+}
 /*input[type=text], select, textarea {
     width: 100%;
     padding: 12px;
