@@ -29,7 +29,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .page-title{
-    border-bottom: .25rem solid white;
+    border-bottom: .25rem solid;
 /*    width: 4em;*/
 }
 
@@ -246,6 +246,20 @@ header.row{
     background-color: transparent;
     color: white;
 }
+
+/******** ABOUT ***********/
+
+.skills {
+  text-align: right;
+  padding-right: 20px;
+  line-height: 40px;
+  color: white;
+}
+
+.html {width: 90%; background-color: #4CAF50;}
+.css {width: 80%; background-color: #2196F3;}
+.js {width: 65%; background-color: #f44336;}
+.php {width: 60%; background-color: #808080;}
 
 /******** PORTFOLIO *********/
 /* Create three equal columns that floats next to each other */
