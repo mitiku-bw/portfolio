@@ -41,6 +41,13 @@ h1, h2, h3, h4, h5, h6{
     padding: 1rem;
     background-color: transparent!important;
 }
+/*
+.semi-dark{
+    padding: 1rem;
+    background-color: rgba(17, 122, 139, 0.6)!important;
+}
+
+*/
 .navbar-dark .navbar-nav .nav-link {
     color: #ffc107;
 /*    text-transform: uppercase;*/
@@ -67,6 +74,7 @@ h1, h2, h3, h4, h5, h6{
   color: #fff;
   border-bottom-color: #ffc107;
 }
+
 /***********  header  ************/
 
 header.row{
@@ -263,9 +271,23 @@ header.row{
 
 /******** PORTFOLIO *********/
 /* Create three equal columns that floats next to each other */
+#tabContainer{
+    margin-bottom: 2em;
+}
+#portfolio .column .content .discription{
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+#portfolio .column .content {
+    position: relative;
+}
 .column {
     float: left;
-    width: 33.33%;
+    width: 50%;
     display: none; /* Hide all elements by default */
 }
 
