@@ -277,13 +277,17 @@ header.row{
 #portfolio .column .content .discription{
     position: absolute;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+    background: rgba(59, 91, 92, 0.8); /* Black background with transparency */
     color: #f1f1f1;
     width: 100%;
     padding: 20px;
 }
 #portfolio .column .content {
     position: relative;
+}
+#portfolio .column .content a{
+    text-decoration: underline;
+    color: #ffc107;
 }
 .column {
     float: left;
