@@ -28,9 +28,11 @@
                 <li><a href="#" class="fa fa-google"></a></li>
             </ul>
         </div>
-        <div class="header-content typewriter col-md-8">
+        <div class="header-content col-md-8">
             <h1>Hello, I'm Mitiku.</h1>
-            <p>I'm a software developer!</p>
+            <p class="typewrite" data-period="2000" data-type='[ "I am a software developer ... ", "Mobile and web developer ... "]'>
+                <span class="wrap"></span>
+            </p>
             <a href="#about" class="scroll-down"><i class="fa fa-angle-down text-yellow"></i></a>
             
          </div>
@@ -82,6 +84,27 @@
     <section id="portfolio" class="section section-b">
         <div class="container">
             <h2 class="title"><span class="page-title">Portfolio</span></h2>
+            
+<!--
+            <ul id="tabContainer" class="nav nav-tabs">
+              <li class="nav-item">
+                  <a class="nav-link active" href="#" onclick="filterSelection('all')"> Show all</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href=".angular" onclick="filterSelection('angular')"> Angular</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="filterSelection('react')"> React</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="filterSelection('node')"> Node.js</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="filterSelection('others')"> Others</a>
+              </li>
+            </ul>
+            
+-->
             <div id="tabContainer">
                 <button class="btn active" onclick="filterSelection('all')"> Show all</button>
                 <button class="btn" onclick="filterSelection('angular')"> Angular</button>
@@ -89,50 +112,58 @@
                 <button class="btn" onclick="filterSelection('node')"> Node.js</button>
                 <button class="btn" onclick="filterSelection('others')"> Others</button>
             </div>
+            
             <!-- Portfolio Gallery Grid -->
             <div class="row align-items-end">
               <div class="column angular">
+               <a href="http://thesis-mitikubw.c9users.io/" target="_blank">
                 <div class="content">
-                    <a href="http://thesis-mitikubw.c9users.io/" target="_blank"><img src="./images/realtime-screenshot.png" alt="angular" style="width:100%"></a>
-                  <div class="discription">
-                      <h4>IoT Data Visualization</h4>
-                      <p></p>A thesis project made with MEAN Stack and D3</p>
-                  </div>
+                 <img src="./images/realtime-screenshot.png" alt="angular">
+                    <div class="discription">
+                        <h4>IoT Data Visualization</h4>
+                        <p>A thesis project made with MEAN Stack and D3</p>
+                    </div>
                 </div>
+                </a>
               </div>
               <div class="column react">
+               <a href="https://mitiku-bw.github.io/e-books/" target="_blank">
                 <div class="content">
-                 <a href="https://mitiku-bw.github.io/e-books/" target="_blank"><img src="./images/react.png" alt="react" style="width:100%"></a>
-                  <div class="discription">
-                      <h4>React Projects</h4>
-                      <p>Finna api manipulation under construction..</p>
-                  </div>
-                  
+                 <img src="./images/react.png" alt="react">
+                     <div class="discription">
+                     <h4>React Projects</h4>
+                     <p>Finna api manipulation under construction..</p>
+                     </div>
                 </div>
+                </a>
               </div>
               <div class="column node">
+               <a href="#" target="_blank">
                 <div class="content">
-                  <a href="#" target="_blank"><img src="./images/node.png" alt="node" style="width:100%"></a>
-                  <div class="discription">
-                      <h4>Node.js Projects</h4>
-                      <p>Under construction ...</p>
-                  </div>
+                  <img src="./images/node.png" alt="node">
+                      <div class="discription">
+                          <h4>Node.js Projects</h4>
+                          <p>Under construction ...</p>
+                      </div>
                   
                 </div>
+                </a>
               </div>
               <div class="column others">
+               <a href="https://mitiku-bw.github.io/polku-old-website/" target="_blank">
                 <div class="content">
-                  <a href="https://mitiku-bw.github.io/polku-old-website/" target="_blank"><img src="./images/polku-screenshot.png" alt="other" style="width:100%"></a>
-                  <div class="discription">
-                      <h4>The old Polku Innovations website</h4>
-                      <p>Made with HTML5, CSS3 and JavaScript</p>
-                  </div>
-                  
+                  <img src="./images/polku-screenshot.png" alt="other">
+                      <div class="discription">
+                          <h4>The old Polku Innovations website</h4>
+                          <p>Made with HTML5, CSS3 and JavaScript</p>
+                    </div>
                 </div>
+                </a>
               </div>
 
             <!-- END GRID -->
             </div>
+        </div>
     </section>
     <section id="contact" class="section contact-me">
         <h2 class="row"><span class="page-title">Contact me</span></h2>
