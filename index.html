@@ -17,7 +17,9 @@
     
     <header class="container row align-items-center v-header">
         <div class="fullscreen-video-wrap hidden-sm-down">
-            <video id="video-background" src="images/Writing-Working/Writing-Working.mp4" autoplay="" loop=""></video>
+            <video video autoplay muted loop id="video-background">
+                <source src="images/Writing-Working/Writing-Working.mp4" type="video/mp4">
+            </video>
         </div>
         <div class="header-overlay"></div>
         <div id="social-icons" class="social-media col-md-4">
@@ -173,7 +175,7 @@
                 <div id="map"></div>
             </div>
             <div class="col-md-6">
-                <form action="/action_page.php">
+                <form action="#">
                     <div class="form-group row">
                         <label for="exampleInputEmail1">Email address</label>
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
@@ -187,7 +189,7 @@
                         <label for="country">Country</label>
                         <select class="form-control" id="country">
                             <option>Ethiopia</option>
-                            <option>Finland</option>
+                            <option selected="selected">Finland</option>
                             <option>Germany</option>
                             <option>Russia</option>
                             <option>Sweden</option>
