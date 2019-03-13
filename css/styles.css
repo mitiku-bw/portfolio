@@ -2,35 +2,31 @@
  * Imports
  */
 
-@import url('https://fonts.googleapis.com/css?family=Raleway|Orbitron');
-
+@import url('https://fonts.googleapis.com/css?family=Raleway|Orbitron|Oxygen|Montserrat:300,600');
 *{
   box-sizing: border-box;
 }
-
+*:before, *:after {
+    box-sizing: border-box;
+}
 body{
     margin:0;
   /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size:1rem;
-    font-weight:normal;
+    font-weight:300;
     line-height:1.5;
     color:#333;
     overflow-x:hidden;
 }
 
 h1, h2, h3, h4, h5, h6{
-    
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 300;
 }
 
 .text-yellow{
     color: #ffc107;
-}
-
-.page-title{
-    border-bottom: .25rem solid;
-/*    width: 4em;*/
 }
 
 /* Overriding bootstrap classes */
@@ -40,6 +36,32 @@ h1, h2, h3, h4, h5, h6{
 .bg-dark{
     padding: 1rem;
     background-color: transparent!important;
+    transition:500ms ease;
+}
+.bg-dark.scrolled{
+    background:rgba(17, 122, 139, 0.6)!important;
+  }
+.scrolled .text-info{
+    color: #ffc107!important;  
+}
+
+.card-group{
+    margin: 2em;
+}
+  
+.card {
+    background: none;
+    border: none;
+}
+.card-img-top {
+    margin-bottom: 25px;
+    width: 100px;
+    height: auto;
+    max-width: 100%;
+    border: none;
+}
+.card-title {
+    color: #17a2b8!important
 }
 /*
 .semi-dark{
@@ -136,6 +158,7 @@ header.row{
 
 
 .header-content h1{
+    font-weight: 600;
     font-size:50px;
     margin-bottom:0;
 }
@@ -181,20 +204,27 @@ header.row{
 }
 
 .section{
+    line-height: 1.5;
+    font-size: 1em;
     padding:5em 1.5em;
     min-height: 100vh;
 }
 .section-a{
-    background: #3b5b5c;
-    color:#fff;
+    background-color: #fff;
+    color: black;
 }
+.bg-border-radius {
+    width: 100vw;
+    height: 10%;
+    border-radius: 0 50vw 0 50vw;
+    background-color: rgba(17, 122, 139, 0.6);
+  }
+
 .section-b{
-  background:#333;
-  color:#fff;
+  background:#f0f0f0;
 }
 .contact-me{
     color: #f8f9fa;
-    text-align: center;
     background-image: linear-gradient(to bottom, #117a8b 0%, #17a2b8 50%, rgba(0,123,255,.5) 100%);
 }
 
@@ -283,11 +313,14 @@ header.row{
 
 /******** ABOUT ***********/
 
-.skills {
+.about {
   text-align: right;
   padding-right: 20px;
   line-height: 40px;
   color: white;
+}
+.section-intro {
+    margin: 80px auto;
 }
 
 .html {width: 90%; background-color: #4CAF50;}
@@ -347,83 +380,54 @@ header.row{
   background-color: #666;
   color: white;
 }
-
-/*input[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-}*/
-
-/*input[type=submit] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    cursor: pointer;
-}*/
-
-/*input[type=submit]:hover {
-    background-color: #45a049;
-}*/
-
-/* Style the container/contact section */
-/*
-.container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 10px;
+.section-body {
+    padding: 3.5rem 0 1rem;
 }
-*/
 
-/* Create two columns that float next to eachother */
-/*.column {
-    float: left;
-    width: 50%;
-    margin-top: 6px;
-    padding: 20px;
-}*/
+.Solutions_solution__uv3Vn[data-index="1"] .Solutions_icon__1jOr- {
+    fill: #39c5ff;
+}
 
-/* Clear floats after the columns */
-/*.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}*/
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media (max-width: 600px) {
-    .column, input[type=submit] {
-        width: 100%;
-        margin-top: 0;
+.Solutions_icon__1jOr- {
+    width: 90px;
+    margin: 0 auto 1.5em;
+    display: block;
+    height: auto;
+    max-width: 100%;
+    fill: #ffc107;
+}
+@media screen and (min-width: 48em){
+    .section-body {
+        padding-bottom: 3em;
+        padding-top: 3em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
+    .Solutions_solution__uv3Vn[data-index="1"] {
+    box-shadow: 0 0 76px 0 rgba(11,44,126,.53);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    z-index: 6;
 }
-
-
-
+.Solutions_solution__uv3Vn[data-index="1"] {
+    background: #1d52d6;
+}}
+@media screen and (min-width: 48em){
+.Solutions_solution__uv3Vn {
+    padding: 3em;
+    flex: 1 1 33.333333333333333%;
+    max-width: 33.333333333333336%;
+}
+.Solutions_solution__uv3Vn {
+    color: #fff;
+    padding: 1.5em;
+    position: relative;
+    text-align: center;
+    z-index: 3;
+}}
 /************* MEDIA QUERIES **************/
-
-@media(max-width:960px){
-  /*.container{
-    padding-right:3rem;
-    padding-left:3rem;
-  }*/
-}
-
-
-
-* ----------- iPhone 4 and 4S ----------- */
-
-/* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-      
-
-}
+/* ----------- iPhone 4 and 4S ----------- */
 
 /* Portrait */
 @media only screen 

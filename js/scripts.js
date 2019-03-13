@@ -1,3 +1,6 @@
+$(window).scroll(function(){
+    $('nav').toggleClass('scrolled', $(this).scrollTop() >= 600);
+})
 //jQuery is required to run this code
 $(document).ready(function(){
 /*     $(window).on('scroll', function(){
