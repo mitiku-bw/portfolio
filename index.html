@@ -61,7 +61,7 @@
         <div class="container">
             <div class="section-intro text-center">
                 <h3>Self-motivated, Constant Learner and Passionate</h3>
-                <p>I always strive to create usable and polished products through passionate and deliberate design.</p>
+                <p>I always strive to persistently keep pace with the most recent advancements in the software development.</p>
             </div>
             <div class="card-group">
                 <div class="card  text-center raised">
@@ -95,7 +95,9 @@
     </section>
     <section id="portfolio" class="section section-b">
         <div class="container">
-            <h2 class="page-title">Portfolio</h2>
+            <div class="section-intro text-center">
+                <h2 class="page-title">Portfolio</h2>
+            </div>
             <div id="tabContainer">
                 <button class="btn active" onclick="filterSelection('all')"> Show all</button>
                 <button class="btn" onclick="filterSelection('angular')"> Angular</button>
@@ -157,45 +159,51 @@
         </div>
     </section>
     <section id="contact" class="section contact-me">
-        <h2 class="page-title text-center">Get in touch</h2>
+        <div class="card-group">
+            <div class="card">
+                <div class="card-top text-center">
+                    <ul class="list-group">
+                        <li class="list-group-item"><h5>Get in touch</h5></li>
+                        <li class="list-group-item"><img class="svg-icon" src="../Tilda Icons_40_IT Company/Tilda_Icons_40_IT_letter.svg" alt="Email address"><strong>mitikubw@gmail.com</strong></li>
+                        <li class="list-group-item"><img class="svg-icon" src="../Tilda Icons_40_IT Company/Tilda_Icons_40_IT_call.svg" alt="Phone Number"><strong>+358 4517 43505</strong></li>
+                    </ul>
 
-        <div class="row">
-            <div class="col-md-6">
-                <div id="map"></div>
+                </div>
+                <div class="card-body social-media text-center">
+                    <!-- Add font awesome icons -->
+                    <h5>Follow me</h5>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/mitiku-wubetie/" class="fa fa-linkedin"></a></li>
+                        <li><a href="#" class="fa fa-github"></a></li>
+                        <li><a href="#" class="fa fa-google"></a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-md-6">
-                <form action="#">
-                    <div class="form-group row">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                        <small id="emailHelp" class="form-text text-muted">I'll never share your email with anyone else.</small>
-                    </div>
-                    <div class="form-group row">
-                        <label for="name">Name</label>
-                        <input type="name" class="form-control" id="name" aria-describedby="name" placeholder="Name">
-                    </div>
-                    <div class="form-group row">
-                        <label for="country">Country</label>
-                        <select class="form-control" id="country">
-                            <option>Ethiopia</option>
-                            <option selected="selected">Finland</option>
-                            <option>Germany</option>
-                            <option>Russia</option>
-                            <option>Sweden</option>
-                        </select>
-                    </div>
-                    <div class="form-group row">
-                        <label for="message">Message</label>
-                        <textarea class="form-control" id="message" rows="3"></textarea>
-                    </div>
-                    <div class="form-group row">
-                        <button type="submit" class="btn btn-primary btn-block">Send</button>
-                    </div>
-                    
-                </form>
+            <div class="card front">
+                <div class="card title">
+                    <h5>Let's meet somewhere in Helsinki</h5>
+                </div>
+                ​<picture id="map-frame">
+                    <source media="(min-width: 465px)" srcset="images/helsinki1.png">
+                    <img src="images/helsinki1.png" class="img-fluid img-thumbnail" alt="Helsinki City map">
+                </picture>
             </div>
         </div>
-        <footer class="text-muted text-center"><a href="https://tilda.cc">Icons are provided by Tilda Publishing</a></footer>
+        <footer class="row">
+            <div class="col-sm align-self-center">
+                <ul>
+                    <li><small><a class="text-muted" href="https://tilda.cc">Icons are provided by Tilda Publishing</a></small></li>
+                    <li><small><a class="text-muted" href="https://pixabay.com">Header video from pixabay</a></small></li>
+                </ul>
+            </div>
+            <div class="col-sm align-self-center">
+                <ul>
+                    <li><small class="text-muted">&COPY;2019 by Mitiku Wubetie.</small></li>
+                    <li><small class="text-muted"><a class="text-muted" href="#">Privacy Policy</a> and <a class="text-muted" href="#">Terms of Use.</a></small></li>
+                </ul>
+            </div>
+            </div>
+        </footer>
     </section>
 
     
@@ -204,10 +212,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAD2gdai6RcGvxaPr_EuAomXUePiVkSHiw&callback=initMap"
-    async defer></script>
     <script src="js/scripts.js"></script>
-    <script src="js/map.js"></script>
      
     <!--
     To use this code on your website, get a free API key from Google.
