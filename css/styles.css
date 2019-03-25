@@ -48,7 +48,12 @@ h1, h2, h3, h4, h5, h6{
 /* .scrolled .text-info{
     color: #ffc107!important;  
 } */
-
+#about .card{
+    border: 1px solid #ffc107;
+    border-top: 4px solid #17a2b8;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,123,255,.25);
+}
 .card-group{
     margin: 2em;
 }
@@ -89,7 +94,8 @@ h1, h2, h3, h4, h5, h6{
 
 .navbar-collapse .nav-link:hover,
 .navbar-collapse .nav-link:focus {
-  border-bottom-color: rgba(255,255,255,.25);
+    color: #17a2b8!important;
+    border-bottom-color: rgb(255, 193, 7, .25);
 }
 
 .navbar-collapse .nav-link + .nav-link {
@@ -837,3 +843,12 @@ and (min-width: 768px){
       }
 
 }
+.style-7 {
+    background: 
+      linear-gradient(45deg, yellow 50%, transparent 50%),
+      radial-gradient(teal 4px, transparent 4px),
+      radial-gradient(teal 4px, transparent 4px),
+      transparent;
+    background-size: 100%, 24px 24px, 24px 24px, 100%;
+    background-position: 0 0, -2px 6px, 10px 18px, 0 0;
+  }
