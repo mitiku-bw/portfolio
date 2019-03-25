@@ -4,6 +4,9 @@
 
 /* @import url('https://fonts.googleapis.com/css?family=Raleway|Orbitron|Oxygen|Montserrat:300,600'); */
 @import url('https://fonts.googleapis.com/css?family=Comfortaa|Montserrat:300,700');
+html {
+    scroll-behavior: smooth;
+  }
 *{
   box-sizing: border-box;
 }
@@ -19,6 +22,8 @@ body{
     line-height:1.5;
     color:#333;
     overflow-x:hidden;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -219,6 +224,7 @@ header.row{
     font-size: 1em;
     padding:5em 0;
     min-height: 100vh;
+    scroll-snap-align: center;
 }
 .section-a{
     background-color: #fff;
